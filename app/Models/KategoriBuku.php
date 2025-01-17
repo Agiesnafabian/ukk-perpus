@@ -5,7 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class tabel_bukku extends Model
+class KategoriBuku extends Model
 {
     use HasFactory;
+
+    public function bukkus(){
+        return $this->hasMany(Buku::class);
+    }
 }
